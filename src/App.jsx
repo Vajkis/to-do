@@ -1,8 +1,12 @@
 import './App.scss';
+import List from './components/List';
 
 function App() {
   return (
-    <h1>test</h1>
+    <>
+      <List />
+      <div className='list p'>Add list</div>
+    </>
   );
 }
 
