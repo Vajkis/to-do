@@ -4,9 +4,17 @@ import Task from "./Task";
 function List() {
 
     const [list, setList] = useState([])
+
     return (
         <>
-            {list.map(l => <div key={l.id}><Task /></div>)}
+            {list.map(l => {
+                return (
+                    <div key={l.id}>
+                        {l.title}
+                        <Task />
+                    </div>
+                );
+            })}
         </>
     );
 }
