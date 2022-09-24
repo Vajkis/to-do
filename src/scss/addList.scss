@@ -1,0 +1,20 @@
+.addList {
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: none;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 1em;
+
+    &::placeholder {
+        color: #a9a9a9;
+    }
+
+    &:focus {
+        cursor: text;
+        text-align: left;
+    }
+}

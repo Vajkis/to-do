@@ -1,10 +1,13 @@
-body {
-    background-color: #35363a;
-    color: #fff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
-.p {
-    cursor: pointer;
+body {
+    background-color: #1f2024;
+    color: #fff;
+
+    * {
+        font-family: 'Roboto Slab', serif;
+    }
 }
 
 @import 'scss/list';
+@import 'scss/addList';

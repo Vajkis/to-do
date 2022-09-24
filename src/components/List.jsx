@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
+import DataContext from "./DataContext";
 import Task from "./Task";
 
 function List() {
 
-    const [list, setList] = useState([])
+    const { list } = useContext(DataContext);
 
     return (
         <>
