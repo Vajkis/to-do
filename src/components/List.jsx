@@ -10,7 +10,7 @@ function List() {
         <>
             {list.map(l => {
                 return (
-                    <div key={l.id}>
+                    <div className='list' key={l.id}>
                         {l.title}
                         <Task />
                     </div>

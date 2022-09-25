@@ -4,19 +4,27 @@ import { useState } from "react";
 
 import DataContext from './components/DataContext';
 import List from './components/List';
+import AddList from './components/AddList';
 
 function App() {
 
+  const [id, setId] = useState(0)
+
   const [list, setList] = useState([])
-  const [focus, setFocus] = useState(false)
+  const getId = () => {
+    console.log(id);
+    setId(i => i + 1)
+    return id;
+  }
 
   return (
     <DataContext.Provider value={{
       list,
-      setList
+      setList,
+      getId
     }}>
       <List />
-      <input className='list addList' placeHolder={focus ? null : '+ Add new list'} onFocus={() => setFocus(true)} onBlur={() => setFocus(false)} />
+      <AddList />
     </DataContext.Provider>
   );
 }
