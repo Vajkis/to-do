@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import AddTask from "./AddTask";
 import DataContext from "./DataContext";
 import Task from "./Task";
 
@@ -11,7 +12,8 @@ function List() {
             {list.map(l => {
                 return (
                     <div className='list' key={l.id}>
-                        {l.title}
+                        <div className='title'>{l.title}</div>
+                        <AddTask />
                         <Task />
                     </div>
                 );

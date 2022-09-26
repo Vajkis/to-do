@@ -1,12 +1,37 @@
 .list {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 10px;
+
     width: 300px;
-    margin: 20px;
-    padding: 15px 20px;
+    margin: 20px 10px;
+
+
     border-radius: 10px;
     background-color: #292a2f;
 
-    .task {
-        margin: 5px;
+    .title {
+        padding: 15px 20px;
+    }
+}
+
+.addList {
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+
+    font-weight: 700;
+    font-size: 1em;
+
+    &::placeholder {
+        color: #a9a9a9;
+    }
+
+    &:focus {
+        cursor: text;
+        text-align: left;
     }
 }

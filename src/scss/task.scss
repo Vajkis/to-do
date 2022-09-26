@@ -1,0 +1,19 @@
+.task {
+    background-color: unset;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 20px;
+    width: 260px;
+
+    &:hover {
+        background-color: #303138;
+    }
+}
+
+.addTask {
+
+    &::placeholder {
+        color: #a9a9a9;
+    }
+}

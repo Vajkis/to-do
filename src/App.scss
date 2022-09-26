@@ -3,11 +3,11 @@
 body {
     background-color: #1f2024;
     color: #fff;
+}
 
-    #root>* {
-        font-family: 'Roboto Slab', serif;
-    }
+* {
+    font-family: 'Roboto Slab', serif;
 }
 
 @import 'scss/list';
-@import 'scss/addList';
+@import 'scss/task';

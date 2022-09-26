@@ -12,7 +12,6 @@ function App() {
 
   const [list, setList] = useState([])
   const getId = () => {
-    console.log(id);
     setId(i => i + 1)
     return id;
   }

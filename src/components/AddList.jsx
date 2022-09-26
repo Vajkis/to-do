@@ -16,12 +16,12 @@ function AddList() {
     const createList = () => {
         if (text) {
             setList(l => [...l, { id: getId(), title: text }]);
-            setText('')
+            setText('');
         }
     }
 
     return (
-        <input className='list addList' placeholder={focus ? null : '+ Add new list'}
+        <input className='list addList title' placeholder={focus ? null : '+ Add new list'}
             onFocus={() => setFocus(true)} onBlur={() => { setFocus(false); createList(); }}
             value={text} onChange={inputText}
         />
