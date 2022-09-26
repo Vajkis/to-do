@@ -26,6 +26,12 @@
     font-weight: 700;
     font-size: 1em;
 
+    background-color: #25262a;
+
+    &:hover {
+        background-color: #292a2f;
+    }
+
     &::placeholder {
         color: #a9a9a9;
     }

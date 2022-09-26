@@ -8,6 +8,7 @@
 
     &:hover {
         background-color: #303138;
+        cursor: pointer;
     }
 }
 
@@ -15,5 +16,10 @@
 
     &::placeholder {
         color: #a9a9a9;
+    }
+
+    &:focus {
+        cursor: text;
+        text-align: left;
     }
 }
