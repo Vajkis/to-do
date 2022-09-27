@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import AddTask from "./AddTask";
 import DataContext from "./DataContext";
-import Task from "./Task";
+import Tasks from "./Tasks";
 
-function List() {
+function Lists() {
 
-    const { list } = useContext(DataContext);
+    const { lists } = useContext(DataContext);
 
     return (
         <>
-            {list.map(l => {
+            {lists.map(l => {
                 return (
                     <div className='list' key={l.id}>
-                        <div className='title'>{l.title}</div>
+                        <div className='listTitle'>{l.title}</div>
                         <AddTask />
-                        <Task />
+                        <Tasks />
                     </div>
                 );
             })}
@@ -22,4 +22,4 @@ function List() {
     );
 }
 
-export default List;
+export default Lists;

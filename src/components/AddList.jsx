@@ -3,7 +3,7 @@ import DataContext from "./DataContext";
 
 function AddList() {
 
-    const { setList, getId } = useContext(DataContext);
+    const { setLists, getId } = useContext(DataContext);
 
     const [focus, setFocus] = useState(false);
     const [text, setText] = useState('');
@@ -15,13 +15,13 @@ function AddList() {
 
     const createList = () => {
         if (text) {
-            setList(l => [...l, { id: getId(), title: text }]);
+            setLists(l => [...l, { id: getId(), title: text }]);
             setText('');
         }
     }
 
     return (
-        <input className='list addList title' placeholder={focus ? null : '+ Add new list'}
+        <input className='list addList' placeholder={focus ? null : '+ Add new list'}
             onFocus={() => setFocus(true)} onBlur={() => { setFocus(false); createList(); }}
             value={text} onChange={inputText}
         />

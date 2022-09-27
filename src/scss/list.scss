@@ -10,7 +10,7 @@
     border-radius: 10px;
     background-color: #292a2f;
 
-    .title {
+    .listTitle {
         padding: 15px 20px;
     }
 }
@@ -21,7 +21,7 @@
     color: #fff;
     border: none;
     outline: none;
-    padding: 15px 20px;
+    padding: 15px 0;
 
     font-weight: 700;
     font-size: 1em;
@@ -39,5 +39,7 @@
     &:focus {
         cursor: text;
         text-align: left;
+        padding-left: 20px;
+        width: 280px;
     }
 }
