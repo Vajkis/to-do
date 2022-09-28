@@ -13,8 +13,8 @@ function Lists() {
                 return (
                     <div className='list' key={l.id}>
                         <div className='listTitle'>{l.title}</div>
-                        <AddTask />
-                        <Tasks />
+                        <AddTask id={l.id} />
+                        <Tasks id={l.id} />
                     </div>
                 );
             })}

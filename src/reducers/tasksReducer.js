@@ -7,6 +7,7 @@ function tasksReducer(state, action) {
         case addTaskConst:
             newState.unshift({
                 id: action.payload.id,
+                list: action.payload.list,
                 title: action.payload.title,
                 description: action.payload.description
             })

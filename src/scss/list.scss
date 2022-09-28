@@ -1,7 +1,6 @@
 .list {
     display: inline-flex;
     flex-direction: column;
-    row-gap: 10px;
 
     width: 300px;
     margin: 20px 10px;
@@ -9,9 +8,11 @@
 
     border-radius: 10px;
     background-color: #292a2f;
+    font-size: 13pt;
 
     .listTitle {
         padding: 15px 20px;
+        border-bottom: solid 2px #25262a;
     }
 }
 
@@ -24,7 +25,6 @@
     padding: 15px 0;
 
     font-weight: 700;
-    font-size: 1em;
 
     background-color: #25262a;
 

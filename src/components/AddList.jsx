@@ -20,8 +20,12 @@ function AddList() {
         }
     }
 
+
+
     return (
-        <input className='list addList' placeholder={focus ? null : '+ Add new list'}
+        <input className='list addList' placeholder={focus ? null : '+ Add new list'} style={{
+
+        }}
             onFocus={() => setFocus(true)} onBlur={() => { setFocus(false); createList(); }}
             value={text} onChange={inputText}
         />
