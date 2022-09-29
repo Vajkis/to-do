@@ -9,7 +9,8 @@ function tasksReducer(state, action) {
                 id: action.payload.id,
                 list: action.payload.list,
                 title: action.payload.title,
-                description: action.payload.description
+                description: action.payload.description,
+                editing: action.payload.editing
             })
             break;
         default:

@@ -27,7 +27,8 @@ function AddTask({ id }) {
                 id: getId(),
                 list: id,
                 title: text,
-                description: ''
+                description: '',
+                editing: false
             }));
         }
 
