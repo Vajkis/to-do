@@ -12,7 +12,7 @@ function AddTask({ id }) {
         setText(v);
     }
 
-    const { dispachTasks, getId } = useContext(DataContext);
+    const { dispachTasks, getId, tasks } = useContext(DataContext);
 
 
     const createTask = () => {
@@ -30,6 +30,8 @@ function AddTask({ id }) {
 
     return (
         <input value={text} onChange={inputText} placeholder={focus ? '' : '+ Add new task'} className='task addTask' style={{
+            borderBottomLeftRadius: false ? null : '10px',
+            borderBottomRightRadius: false ? null : '10px'
         }}
             onFocus={() => setFocus(true)} onBlur={() => { setFocus(false); createTask(); }} />
     );
