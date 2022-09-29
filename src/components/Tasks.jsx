@@ -3,8 +3,8 @@ import DataContext from "./DataContext";
 
 function Tasks({ id }) {
 
-    const { tasks } = useContext(DataContext)
-    const thisTasks = [...tasks].filter(t => t.list === id)
+    const { tasks } = useContext(DataContext);
+    const thisTasks = [...tasks].filter(t => t.list === id);
 
     return (
         <>
