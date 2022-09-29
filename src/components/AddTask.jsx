@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { actionAddTask } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
@@ -13,7 +13,13 @@ function AddTask({ id }) {
     }
 
     const { dispachTasks, getId, tasks } = useContext(DataContext);
+    const thisTasks = [...tasks].filter(t => t.list === id);
 
+    const [haveTask, setHaveTask] = useState(false)
+
+    useEffect(() => {
+        setHaveTask(thisTasks.length !== 0)
+    }, [thisTasks])
 
     const createTask = () => {
         if (text) {
@@ -30,8 +36,8 @@ function AddTask({ id }) {
 
     return (
         <input value={text} onChange={inputText} placeholder={focus ? '' : '+ Add new task'} className='task addTask' style={{
-            borderBottomLeftRadius: false ? null : '10px',
-            borderBottomRightRadius: false ? null : '10px'
+            borderBottomLeftRadius: haveTask ? null : '10px',
+            borderBottomRightRadius: haveTask ? null : '10px'
         }}
             onFocus={() => setFocus(true)} onBlur={() => { setFocus(false); createTask(); }} />
     );
