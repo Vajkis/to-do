@@ -8,11 +8,13 @@
 
     border-radius: 10px;
     background-color: #292a2f;
-    font-size: 13pt;
+    font-size: 1.2rem;
 
-    .listTitle {
+    h1 {
+        margin: 0;
         padding: 15px 20px;
         border-bottom: solid 2px #25262a;
+        font-size: 1.2rem;
     }
 }
 

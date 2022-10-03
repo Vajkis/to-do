@@ -21,7 +21,6 @@ function Tasks({ id }) {
             return { ...t, editing: t.id === tId }
         }));
 
-
     }
 
     return (
@@ -34,14 +33,15 @@ function Tasks({ id }) {
                 }}>
                     {
                         t.editing
-                            ? <input value={editTitle} onChange={e => setEditTitle(e.target.value)} />
-                            : <div className='title'>{t.title}</div>
+                            ? <input className='taskTitle' value={editTitle} onChange={e => setEditTitle(e.target.value)} />
+                            : <h2 className='taskTitle'>{t.title}</h2>
                     }
 
                     {
                         t.editing
-                            ? <input value={editDescription} onChange={e => setEditDescription(e.target.value)} />
-                            : <div className='description'>{t.description}</div>
+                            ? <textarea className='taskDescription' value={editDescription} placeholder='Description'
+                                onChange={e => setEditDescription(e.target.value)} />
+                            : <p className='taskDescription'>{t.description}</p>
                     }
 
                 </div>

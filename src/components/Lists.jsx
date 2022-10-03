@@ -12,7 +12,7 @@ function Lists() {
             {lists.map(l => {
                 return (
                     <div className='list' key={l.id}>
-                        <div className='listTitle'>{l.title}</div>
+                        <h1>{l.title}</h1>
                         <AddTask id={l.id} />
                         <Tasks id={l.id} />
                     </div>
