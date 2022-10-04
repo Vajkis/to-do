@@ -33,7 +33,7 @@
     background-color: #25262a;
 
     &:hover {
-        background-color: #292a2f;
+        background-color: #27282d;
     }
 
     &::placeholder {
@@ -41,6 +41,7 @@
     }
 
     &:focus {
+        background-color: #292a2f;
         cursor: text;
         text-align: left;
         padding: 15px 20px;
