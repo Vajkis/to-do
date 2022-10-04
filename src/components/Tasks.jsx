@@ -31,18 +31,26 @@ function Tasks({ id }) {
                     borderBottomRightRadius: i === thisTasks.length - 1 ? '10px' : null,
                     backgroundColor: t.editing ? '#303138' : null
                 }}>
-                    {
-                        t.editing
-                            ? <input className='taskTitle' value={editTitle} onChange={e => setEditTitle(e.target.value)} />
-                            : <h2 className='taskTitle'>{t.title}</h2>
-                    }
 
                     {
-                        t.editing
-                            ? <textarea className='taskDescription' value={editDescription} placeholder='Description'
-                                onChange={e => setEditDescription(e.target.value)} />
-                            : <p className='taskDescription'>{t.description}</p>
+                        t.editing ?
+
+                            <>
+                                <input className='taskTitle' value={editTitle} onChange={e => setEditTitle(e.target.value)} />
+                                <textarea className='taskDescription' value={editDescription} placeholder='Description'
+                                    onChange={e => setEditDescription(e.target.value)} />
+                            </>
+
+                            :
+
+                            <>
+                                <h2 className='taskTitle'>{t.title}</h2>
+                                <p className='taskDescription'>{t.description}</p>
+                            </>
+
                     }
+
+
 
                 </div>
             )}
