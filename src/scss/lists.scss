@@ -8,13 +8,15 @@
 
     border-radius: 10px;
     background-color: #292a2f;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    hyphens: auto;
 
     h1 {
         margin: 0;
         padding: 15px 20px;
         border-bottom: solid 2px #25262a;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 400;
     }
 }
 
@@ -26,7 +28,7 @@
     outline: none;
     padding: 15px 0;
 
-    font-weight: 700;
+
 
     background-color: #25262a;
 
@@ -41,7 +43,7 @@
     &:focus {
         cursor: text;
         text-align: left;
-        padding-left: 20px;
-        width: 280px;
+        padding: 15px 20px;
+        width: 260px;
     }
 }
