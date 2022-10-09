@@ -1,17 +1,11 @@
-import { addTaskConst } from "../constants/taskConstants";
+import { addTask_const } from "../constants/taskConstants";
 
-function tasksReducer(state, action) {
+function tasks_reducer(state, action) {
 
     const newState = [...state];
     switch (action.type) {
-        case addTaskConst:
-            newState.unshift({
-                id: action.payload.id,
-                list: action.payload.list,
-                title: action.payload.title,
-                description: action.payload.description,
-                editing: action.payload.editing
-            })
+        case addTask_const:
+
             break;
         default:
     }

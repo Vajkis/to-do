@@ -1,0 +1,50 @@
+// .list {
+//     display: inline-flex;
+//     flex-direction: column;
+
+//     width: 300px;
+//     margin: 20px 10px;
+
+
+//     border-radius: 10px;
+//     background-color: #292a2f;
+//     font-size: 1.1rem;
+//     hyphens: auto;
+
+//     h1 {
+//         margin: 0;
+//         padding: 15px 20px;
+//         border-bottom: solid 2px #25262a;
+//         font-size: 1.1rem;
+//         font-weight: 400;
+//     }
+// }
+
+// .addList {
+//     cursor: pointer;
+//     text-align: center;
+//     color: #fff;
+//     border: none;
+//     outline: none;
+//     padding: 15px 0;
+
+
+
+//     background-color: #25262a;
+
+//     &:hover {
+//         background-color: #27282d;
+//     }
+
+//     &::placeholder {
+//         color: #a9a9a9;
+//     }
+
+//     &:focus {
+//         background-color: #292a2f;
+//         cursor: text;
+//         text-align: left;
+//         padding: 15px 20px;
+//         width: 260px;
+//     }
+// }

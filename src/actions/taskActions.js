@@ -1,8 +1,7 @@
-import { addTaskConst } from "../constants/taskConstants";
+import { addTask_const } from "../constants/taskConstants";
 
-export function actionAddTask(taskData) {
+export function addTask_action() {
     return {
-        type: addTaskConst,
-        payload: taskData
+        type: addTask_const
     };
 }
