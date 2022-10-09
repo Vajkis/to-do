@@ -1,4 +1,4 @@
-import './App.scss';
+import './scss/app.scss';
 
 import DataContext from './components/DataContext';
 
