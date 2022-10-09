@@ -4,18 +4,18 @@ import DataContext from "./DataContext";
 
 function AddTask() {
 
-    const { dispachTasks } = useContext(DataContext)
+    const { dispachTasks } = useContext(DataContext);
 
     const [text, setText] = useState('');
 
     const editText = e => {
-        const v = e.target.value
-        setText(() => v)
+        const v = e.target.value;
+        setText(() => v);
     }
 
     const addTask = () => {
-        dispachTasks(addTask_action({ title: text }))
-        setText(() => '')
+        dispachTasks(addTask_action({ title: text }));
+        setText(() => '');
     }
 
 

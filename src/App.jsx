@@ -15,7 +15,7 @@ function App() {
   const [tasks, dispachTasks] = useReducer(tasks_reducer, null)
 
   useEffect(() => {
-    dispachTasks(loadTasks_action())
+    dispachTasks(loadTasks_action());
   }, [])
 
   return (

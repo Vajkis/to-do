@@ -10,7 +10,7 @@ function tasks_reducer(state, action) {
             break;
 
         case addTask_const:
-            newState.shift(action.payload)
+            newState.unshift(action.payload)
             break;
         default:
     }
