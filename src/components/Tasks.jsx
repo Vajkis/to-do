@@ -1,29 +1,31 @@
 import { useContext, useState } from "react";
+import { setTaskFocus_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
 function Tasks() {
 
-    const { tasks } = useContext(DataContext);
+    const { tasks, dispachTasks } = useContext(DataContext);
 
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
 
     const focusTask = t => {
 
-        setTitle(() => t.title);
-        setDescription(() => t.description)
-
         return (
-            <div>
-                <textarea value={title} onChange={e => e.target.value}></textarea>
-                <textarea value={description} onChange={e => e.target.value}></textarea>
+            <div key={t.id}>
+                <textarea value={title} onChange={e => setTitle(e.target.value)} placeholder='Title'></textarea>
+                <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder='Description'></textarea>
             </div>
         );
     }
 
     const blurTask = t => {
         return (
-            <div key={t.id}>
+            <div key={t.id} onClick={() => {
+                setTitle(() => t.title);
+                setDescription(() => t.description);
+                dispachTasks(setTaskFocus_action(t.id));
+            }}>
                 <h2>{t.title}</h2>
                 <p>{t.description}</p>
             </div>

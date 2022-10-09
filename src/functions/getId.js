@@ -1,7 +1,7 @@
 function getId() {
 
     let id = localStorage.getItem('id') || 0;
-    localStorage.setItem('id', ++id)
+    localStorage.setItem('id', ++id);
 
     return id;
 }

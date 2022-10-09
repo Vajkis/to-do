@@ -1,8 +1,8 @@
-import { addTask_const, loadTasks_const } from "../constants/taskConstants";
+import { addTask_const, loadTasks_const, setTaskFocus_const } from "../constants/taskConstants";
 
 function tasks_reducer(state, action) {
 
-    let newState = state ? [...state] : null;
+    let newState = state ? [...state] : [];
 
     switch (action.type) {
         case loadTasks_const:
@@ -11,6 +11,10 @@ function tasks_reducer(state, action) {
 
         case addTask_const:
             newState.unshift(action.payload);
+            break;
+
+        case setTaskFocus_const:
+            newState = newState.map(t => ({ ...t, focus: t.id === action.payload }));
             break;
         default:
     }
