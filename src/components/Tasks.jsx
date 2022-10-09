@@ -10,11 +10,13 @@ function Tasks() {
     const [description, setDescription] = useState('');
 
     const editTask = id => {
-        dispachTasks(editTask_action({
-            id,
-            title,
-            description
-        }))
+        if (title) {
+            dispachTasks(editTask_action({
+                id,
+                title,
+                description
+            }))
+        }
     }
 
     const focusTask = t => {
