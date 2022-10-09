@@ -1,5 +1,3 @@
-import axiom from "axiom";
-
 function getId() {
 
     let id = localStorage.getItem('id') || 0;

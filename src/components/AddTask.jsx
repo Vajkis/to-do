@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { addTask_action } from "../actions/taskActions";
+import getId from "../functions/getId";
 import DataContext from "./DataContext";
 
 function AddTask() {
@@ -13,16 +14,22 @@ function AddTask() {
         setText(() => v);
     }
 
-    const addTask = () => {
-        dispachTasks(addTask_action({ title: text }));
-        setText(() => '');
+    const addTask = key => {
+        if (key === 'Enter' && text) {
+            dispachTasks(addTask_action({
+                id: getId(),
+                title: text
+            }));
+            setText(() => '');
+        }
+
     }
 
 
     return (
         <>
-            <input value={text} onChange={e => editText(e)} onBlur={addTask} />
-            <button onClick={addTask}>Add Task</button>
+            <input value={text} onChange={e => editText(e)} onKeyDown={e => addTask(e.key)} onBlur={() => addTask('Enter')} />
+            <button onClick={() => addTask('Enter')}>Add Task</button>
         </>
     )
 
