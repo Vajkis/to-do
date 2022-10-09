@@ -7,7 +7,7 @@ function tasks_reducer(state, action) {
     switch (action.type) {
 
         case loadTasks_const:
-            newState = JSON.parse(localStorage.getItem('tasksData')).map(t => ({ ...t, focus: false })) || []
+            newState = JSON.parse(localStorage.getItem('tasksData'))?.map(t => ({ ...t, focus: false })) || []
             break;
 
         case addTask_const:
