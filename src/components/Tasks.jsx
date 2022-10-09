@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { editTask_action, setTaskFocus_action } from "../actions/taskActions";
+import { editTask_action, loadTasks_action, setTaskFocus_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
 function Tasks() {
@@ -25,6 +25,7 @@ function Tasks() {
             <div key={t.id}>
                 <textarea value={title} onChange={e => setTitle(e.target.value)} placeholder='Title'></textarea>
                 <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder='Description'></textarea>
+                <button onClick={() => dispachTasks(loadTasks_action())}>Cancel</button>
                 <button onClick={() => editTask(t.id)}>Save</button>
             </div>
         );
