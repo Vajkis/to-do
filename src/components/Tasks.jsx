@@ -1,4 +1,4 @@
-function Tasks({ id }) {
+function Tasks() {
 
     return (
         <>

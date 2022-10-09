@@ -1,11 +1,16 @@
-import { addTask_const } from "../constants/taskConstants";
+import { addTask_const, loadTasks_const } from "../constants/taskConstants";
 
 function tasks_reducer(state, action) {
 
-    const newState = [...state];
-    switch (action.type) {
-        case addTask_const:
+    let newState = state ? [...state] : null;
 
+    switch (action.type) {
+        case loadTasks_const:
+            newState = []
+            break;
+
+        case addTask_const:
+            newState.shift(action.payload)
             break;
         default:
     }
@@ -13,4 +18,4 @@ function tasks_reducer(state, action) {
     return newState;
 }
 
-export default tasksReducer;
+export default tasks_reducer;
