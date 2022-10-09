@@ -26,7 +26,6 @@ function AddTask() {
             }));
             setText(() => '');
         }
-
     }
 
     return (
@@ -35,7 +34,6 @@ function AddTask() {
             <button onClick={() => addTask('Enter')}>Add Task</button>
         </>
     )
-
 }
 
 export default AddTask;

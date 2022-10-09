@@ -2,11 +2,12 @@ import { addTask_const, editTask_const, loadTasks_const, setTaskFocus_const } fr
 
 function tasks_reducer(state, action) {
 
-    let newState = state ? [...state] : [];
+    let newState = state ? [...state] : JSON.parse(localStorage.getItem('tasksData')) || [];
 
     switch (action.type) {
+
         case loadTasks_const:
-            newState = [];
+            newState = JSON.parse(localStorage.getItem('tasksData')).map(t => ({ ...t, focus: false })) || []
             break;
 
         case addTask_const:

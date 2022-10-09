@@ -15,8 +15,14 @@ function App() {
   const [tasks, dispachTasks] = useReducer(tasks_reducer, null);
 
   useEffect(() => {
-    dispachTasks(loadTasks_action());
+    dispachTasks(loadTasks_action())
   }, []);
+
+  useEffect(() => {
+    if (tasks) {
+      localStorage.setItem('tasksData', JSON.stringify(tasks));
+    }
+  }, [tasks]);
 
   return (
     <DataContext.Provider value={{
