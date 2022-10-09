@@ -18,8 +18,11 @@ function AddTask() {
         if (key === 'Enter' && text) {
             dispachTasks(addTask_action({
                 id: getId(),
+                listId: '',
                 title: text,
-
+                description: '',
+                focus: false,
+                completed: false
             }));
             setText(() => '');
         }

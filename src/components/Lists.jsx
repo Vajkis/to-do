@@ -6,7 +6,7 @@ function Lists() {
 
     return (
         <>
-            <h1>List Title</h1>
+            <h1>To-Do List</h1>
             <AddTask />
             <Tasks />
             <CompletedTasks />
