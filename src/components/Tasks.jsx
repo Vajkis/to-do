@@ -7,7 +7,7 @@ function Tasks() {
 
     return (
         <>
-            {tasks?.map((t, i) => <div key={i}>{t.title}</div>)}
+            {tasks?.map((t) => <div key={t.id}>{t.title}</div>)}
         </>
     );
 }
