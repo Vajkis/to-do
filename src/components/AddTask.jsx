@@ -18,13 +18,13 @@ function AddTask() {
         if (key === 'Enter' && text) {
             dispachTasks(addTask_action({
                 id: getId(),
-                title: text
+                title: text,
+
             }));
             setText(() => '');
         }
 
     }
-
 
     return (
         <>

@@ -12,11 +12,11 @@ import AddList from './components/AddList';
 
 function App() {
 
-  const [tasks, dispachTasks] = useReducer(tasks_reducer, null)
+  const [tasks, dispachTasks] = useReducer(tasks_reducer, null);
 
   useEffect(() => {
     dispachTasks(loadTasks_action());
-  }, [])
+  }, []);
 
   return (
     <DataContext.Provider value={{
