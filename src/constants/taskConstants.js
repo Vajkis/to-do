@@ -1,1 +1,1 @@
-export const addTaskConst = 1;
+export const addTask_const = 'addTask_const';
