@@ -1,4 +1,4 @@
-import { addTask_const, completeTask_const, editTask_const, loadTasks_const, setTaskFocus_const } from "../constants/taskConstants";
+import { addTask_const, completeTask_const, editTask_const, loadTasks_const, returnTask_const, setTaskFocus_const } from "../constants/taskConstants";
 
 export function loadTasks_action() {
     return { type: loadTasks_const };
@@ -28,6 +28,13 @@ export function editTask_action(taskData) {
 export function completeTask_action(taskId) {
     return {
         type: completeTask_const,
+        payload: taskId
+    };
+}
+
+export function returnTask_action(taskId) {
+    return {
+        type: returnTask_const,
         payload: taskId
     };
 }
