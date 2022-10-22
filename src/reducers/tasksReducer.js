@@ -1,4 +1,4 @@
-import { addTask_const, editTask_const, loadTasks_const, setTaskFocus_const } from "../constants/taskConstants";
+import { addTask_const, completeTask_const, editTask_const, loadTasks_const, setTaskFocus_const } from "../constants/taskConstants";
 
 function tasks_reducer(state, action) {
 
@@ -20,6 +20,10 @@ function tasks_reducer(state, action) {
 
         case editTask_const:
             newState = newState.map(t => t.id === action.payload.id ? { ...t, ...action.payload, focus: false } : { ...t });
+            break;
+
+        case completeTask_const:
+            newState = newState.map(t => t.id === action.payload ? { ...t, completed: true } : { ...t })
             break;
         default:
     }

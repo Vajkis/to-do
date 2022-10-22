@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { editTask_action, loadTasks_action, setTaskFocus_action } from "../actions/taskActions";
+import { completeTask_action, editTask_action, loadTasks_action, setTaskFocus_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
 function Tasks() {
@@ -33,13 +33,16 @@ function Tasks() {
 
     const blurTask = t => {
         return (
-            <div key={t.id} onClick={() => {
-                setTitle(() => t.title);
-                setDescription(() => t.description);
-                dispachTasks(setTaskFocus_action(t.id));
-            }}>
-                <h2>{t.title}</h2>
-                <p>{t.description}</p>
+            <div className='task' key={t.id} >
+                <input type='checkbox' checked={t.completed} onChange={() => dispachTasks(completeTask_action(t.id))} />
+                <div className='taskData' onClick={() => {
+                    setTitle(() => t.title);
+                    setDescription(() => t.description);
+                    dispachTasks(setTaskFocus_action(t.id));
+                }}>
+                    <h2>{t.title}</h2>
+                    <p>{t.description}</p>
+                </div>
             </div>
         );
     }
@@ -47,7 +50,7 @@ function Tasks() {
 
     return (
         <>
-            {tasks?.map((t) => t.focus ? focusTask(t) : blurTask(t))}
+            {tasks?.map((t) => t.completed ? null : t.focus ? focusTask(t) : blurTask(t))}
         </>
     );
 }

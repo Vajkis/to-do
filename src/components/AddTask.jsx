@@ -29,10 +29,10 @@ function AddTask() {
     }
 
     return (
-        <>
-            <input value={text} onChange={e => editText(e)} onKeyDown={e => addTask(e.key)} onBlur={() => addTask('Enter')} placeholder='Title' />
+        <div className='task'>
+            <input className='addTaskInput' value={text} onChange={e => editText(e)} onKeyDown={e => addTask(e.key)} onBlur={() => addTask('Enter')} placeholder='Title' />
             <button onClick={() => addTask('Enter')}>Add Task</button>
-        </>
+        </div>
     )
 }
 

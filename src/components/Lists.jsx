@@ -5,12 +5,12 @@ import Tasks from "./Tasks";
 function Lists() {
 
     return (
-        <>
+        <div className='list'>
             <h1>To-Do List</h1>
             <AddTask />
             <Tasks />
             <CompletedTasks />
-        </>
+        </div>
     );
 }
 
