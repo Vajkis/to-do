@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { completeTask_action, returnTask_action } from "../actions/taskActions";
+import { returnTask_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
 function CompletedTasks() {
