@@ -23,11 +23,11 @@ function tasks_reducer(state, action) {
             break;
 
         case completeTask_const:
-            newState = newState.map(t => t.id === action.payload ? { ...t, completed: true } : { ...t })
+            newState = newState.map(t => t.id === action.payload ? { ...t, completed: true } : { ...t, focus: false })
             break;
 
         case returnTask_const:
-            newState = newState.map(t => t.id === action.payload ? { ...t, completed: false } : { ...t })
+            newState = newState.map(t => t.id === action.payload ? { ...t, completed: false } : { ...t, focus: false })
             break;
         default:
     }

@@ -37,17 +37,7 @@
 //         overflow-y: auto;
 //     }
 
-//     .taskTitle {
-
-//         font-size: 0.9rem;
-//         font-weight: 400;
-//     }
-
-//     .taskDescription {
-//         font-size: 0.75rem;
-//         color: #a9a9a9;
-//         hyphens: auto;
-//     }
+//     
 // }
 
 // .addTask {
@@ -66,7 +56,24 @@
     display: flex;
     width: 300px;
     min-height: 30px;
-    border: 1px solid #000;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: #303138;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #a9a9a9;
+        hyphens: auto;
+    }
 
     .addTaskInput {
         width: 100%;
@@ -74,7 +81,6 @@
 
     .taskData {
         width: 100%;
-        background-color: lightCyan;
     }
 
     .completedTaskData {
