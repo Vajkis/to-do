@@ -1,4 +1,4 @@
-import { addTask_const, completeTask_const, editTask_const, loadTasks_const, returnTask_const, setTaskFocus_const } from "../constants/taskConstants";
+import { addTask_const, completeTask_const, deleteTask_const, editTask_const, loadTasks_const, returnTask_const, setTaskFocus_const } from "../constants/taskConstants";
 
 function tasks_reducer(state, action) {
 
@@ -28,6 +28,10 @@ function tasks_reducer(state, action) {
 
         case returnTask_const:
             newState = newState.map(t => t.id === action.payload ? { ...t, completed: false } : { ...t, focus: false })
+            break;
+
+        case deleteTask_const:
+            newState = newState.map(t => t.id === action.payload ? { ...t, deleted: true } : { ...t, focus: false })
             break;
         default:
     }

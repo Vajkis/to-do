@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { completeTask_action, editTask_action, loadTasks_action, setTaskFocus_action } from "../actions/taskActions";
+import { completeTask_action, deleteTask_action, editTask_action, loadTasks_action, setTaskFocus_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
 function Tasks() {
@@ -43,6 +43,7 @@ function Tasks() {
                     <h2>{t.title}</h2>
                     <p>{t.description}</p>
                 </div>
+                <button onClick={() => dispachTasks(deleteTask_action(t.id))}>Delete</button>
             </div>
         );
     }
@@ -50,7 +51,7 @@ function Tasks() {
 
     return (
         <>
-            {tasks?.map((t) => t.completed ? null : t.focus ? focusTask(t) : blurTask(t))}
+            {tasks?.map((t) => t.deleted ? null : t.completed ? null : t.focus ? focusTask(t) : blurTask(t))}
         </>
     );
 }

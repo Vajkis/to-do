@@ -22,7 +22,8 @@ function AddTask() {
                 title: text,
                 description: '',
                 focus: false,
-                completed: false
+                completed: false,
+                deleted: false
             }));
             setText(() => '');
         }
