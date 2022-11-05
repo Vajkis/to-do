@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { deleteAllTasks_action, deleteCompletedTasks_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
