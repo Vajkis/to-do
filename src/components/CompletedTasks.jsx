@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { deleteCompletedTasks_action, deleteTask_action, returnTask_action } from "../actions/taskActions";
+import { deleteTask_action, returnTask_action } from "../actions/taskActions";
 import DataContext from "./DataContext";
 
 function CompletedTasks() {
@@ -18,8 +18,6 @@ function CompletedTasks() {
                     <button onClick={() => dispachTasks(deleteTask_action(t.id))}>Delete</button>
                 </div>
             )}
-
-            {tasks?.some(t => !t.deleted && t.completed) ? <button onClick={() => dispachTasks(deleteCompletedTasks_action())}>Delete completed tasks</button> : null}
         </div>
     );
 }
