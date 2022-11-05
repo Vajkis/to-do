@@ -19,7 +19,7 @@ function CompletedTasks() {
                 </div>
             )}
 
-            {tasks.some(t => !t.deleted && t.completed) ? <button onClick={() => dispachTasks(deleteCompletedTasks_action())}>Delete all completed tasks</button> : null}
+            {tasks?.some(t => !t.deleted && t.completed) ? <button onClick={() => dispachTasks(deleteCompletedTasks_action())}>Delete all completed tasks</button> : null}
         </div>
     );
 }
