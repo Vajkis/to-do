@@ -9,7 +9,7 @@ function ListMenu() {
     const [focus, setFocus] = useState(false);
 
     return (
-        <div className='list-menu'>
+        <div>
             <div onClick={() => setFocus(f => !f)}>{focus ? 'Hide menu' : 'Show menu'}</div>
             {!focus ? null :
                 <>
