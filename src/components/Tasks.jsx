@@ -35,7 +35,7 @@ function Tasks() {
         return (
             <div className='task' key={t.id} >
                 <input type='checkbox' checked={t.completed} onChange={() => dispachTasks(completeTask_action(t.id))} />
-                <div className='taskData' onClick={() => {
+                <div className='task-data' onClick={() => {
                     setTitle(() => t.title);
                     setDescription(() => t.description);
                     dispachTasks(setTaskFocus_action(t.id));
@@ -50,9 +50,9 @@ function Tasks() {
 
 
     return (
-        <>
+        <div className='tasks-group'>
             {tasks?.map((t) => t.deleted ? null : t.completed ? null : t.focus ? focusTask(t) : blurTask(t))}
-        </>
+        </div>
     );
 }
 

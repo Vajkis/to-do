@@ -11,7 +11,7 @@ function CompletedTasks() {
             {tasks?.map((t) => t.deleted ? null : !t.completed ? null :
                 <div className='task' key={t.id} >
                     <input type='checkbox' checked={t.completed} onChange={() => dispachTasks(returnTask_action(t.id))} />
-                    <div className='taskData completedTaskData'>
+                    <div className='task-data completed-task-data'>
                         <h2>{t.title}</h2>
                         <p>{t.description}</p>
                     </div>

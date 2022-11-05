@@ -75,15 +75,12 @@
         hyphens: auto;
     }
 
-    .addTaskInput {
+    .add-task-input,
+    .task-data {
         width: 100%;
     }
 
-    .taskData {
-        width: 100%;
-    }
-
-    .completedTaskData {
+    .completed-task-data {
         text-decoration: line-through;
     }
 }
