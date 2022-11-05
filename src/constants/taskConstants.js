@@ -5,3 +5,4 @@ export const editTask_const = 'editTask_const';
 export const completeTask_const = 'completeTask_const';
 export const returnTask_const = 'returnTask_const';
 export const deleteTask_const = 'deleteTask_const';
+export const deleteCompletedTasks_const = 'deleteCompletedTasks_const';
